@@ -6,9 +6,25 @@ En esta práctica vamos a explorar tanto la aplicación Docker Desktop de window
   - [Indicaciones de entrega](#indicaciones-de-entrega)
   - [Antes de empezar](#antes-de-empezar)
   - [1. Contenedores](#1-contenedores)
+  - [1.1 ¿ Dónde podemos ver los contendores en marcha en la aplicación Docker Desktop? (Captura)](#11--dónde-podemos-ver-los-contendores-en-marcha-en-la-aplicación-docker-desktop-captura)
+  - [](#)
+  - [comando `docker ps`, ejecutalo. (Captura)](#comando-docker-ps-ejecutalo-captura)
+  - [](#-1)
+  - [1.4 ¿Qué muestra el comando `docker container`?](#14-qué-muestra-el-comando-docker-container)
+  - [1.5 ¿Qué muestra el comando `docker container ls`?](#15-qué-muestra-el-comando-docker-container-ls)
   - [2. Imagenes](#2-imagenes)
+  - [2.1 ¿Dónde podemos ver las imágenes que tenemos descargadas en la aplicación Docker Desktop? (Captura)](#21-dónde-podemos-ver-las-imágenes-que-tenemos-descargadas-en-la-aplicación-docker-desktop-captura)
+  - [2.2 ¿Qué muestra el comando `docker images`?](#22-qué-muestra-el-comando-docker-images)
+  - [2.3 ¿Qué muestra el comando `docker image ls`](#23-qué-muestra-el-comando-docker-image-ls)
   - [3. Volumenes](#3-volumenes)
+  - [3.1 ¿Dónde podemos ver los volumenes que tenemos en la aplicación Docker Desktop? (Captura)](#31-dónde-podemos-ver-los-volumenes-que-tenemos-en-la-aplicación-docker-desktop-captura)
+  - [3.2 ¿Qué vemos en Docker Desktop si entramos en uno de los volumenes disponibles? (Captura)](#32-qué-vemos-en-docker-desktop-si-entramos-en-uno-de-los-volumenes-disponibles-captura)
+  - [3.3 ¿Qué muestra el comando `docker volume`?](#33-qué-muestra-el-comando-docker-volume)
+  - [3.4 ¿Qué muestra el comando `docker volume ls`?](#34-qué-muestra-el-comando-docker-volume-ls)
   - [4. Administrando contendores](#4-administrando-contendores)
+  - [4.1 Si entramos en un contendor, verémos las siguientes pestañas. Las más importantes son **Logs**, **Exec** y **Files**. Explica para qué crees que sirve cada una.](#41-si-entramos-en-un-contendor-verémos-las-siguientes-pestañas-las-más-importantes-son-logs-exec-y-files-explica-para-qué-crees-que-sirve-cada-una)
+  - [4.2 Si queremos ejecutar comandos dentro de un contendor podemos usar Docker Desktop o podemos utilizar el comando `docker exec`.](#42-si-queremos-ejecutar-comandos-dentro-de-un-contendor-podemos-usar-docker-desktop-o-podemos-utilizar-el-comando-docker-exec)
+  - [4.3 Apaga todos los contendores de este proyecto con el comando `docker compose down` (Captura)](#43-apaga-todos-los-contendores-de-este-proyecto-con-el-comando-docker-compose-down-captura)
 
 
 ## Indicaciones de entrega
@@ -32,38 +48,67 @@ docker-compose up -d
 ## 1. Contenedores
 
 1.1 ¿ Dónde podemos ver los contendores en marcha en la aplicación Docker Desktop? (Captura)
-
-1.2 Para ver los contendores en marcha desde la terminal se usa el comando `docker ps`, ejecutalo. (Captura)
-
+---
+![alt text](image.png)
+---
+1.2 Para ver los contendores en marcha desde la terminal se usa el 
+comando `docker ps`, ejecutalo. (Captura)
+---
+![alt text](image-1.png)
+---
 1.4 ¿Qué muestra el comando `docker container`?
+---
+Muestra la ayuda del comando
 
 1.5 ¿Qué muestra el comando `docker container ls`?
+---
+Muestra una lista de todos los contenedores
 
 ## 2. Imagenes
 
 2.1 ¿Dónde podemos ver las imágenes que tenemos descargadas en la aplicación Docker Desktop? (Captura)
+---
+![alt text](image-3.png)
 
 2.2 ¿Qué muestra el comando `docker images`?
+---
+Muestra todas las imagenes descargadas
 
 2.3 ¿Qué muestra el comando `docker image ls`
+---
+Tambien muestra todas las imagenes descargadas
 
 ## 3. Volumenes
 
 3.1 ¿Dónde podemos ver los volumenes que tenemos en la aplicación Docker Desktop? (Captura)
+---
+![alt text](image-4.png)
 
 3.2 ¿Qué vemos en Docker Desktop si entramos en uno de los volumenes disponibles? (Captura)
+---
+![alt text](image-5.png)
 
 3.3 ¿Qué muestra el comando `docker volume`?
+---
+Muestra ayuda del comando para administrar volumenes
 
 3.4 ¿Qué muestra el comando `docker volume ls`?
+---
+Muestra los volumenes locales
 
 ## 4. Administrando contendores
 
 4.1 Si entramos en un contendor, verémos las siguientes pestañas. Las más importantes son **Logs**, **Exec** y **Files**. Explica para qué crees que sirve cada una.
-
+---
 ![alt text](image.png)
+El log enseña todos los estados por los que pasa el contenedor
+<br>
+Exec sirve para ejecutar comandos
+<br>
+Files enseña los archivos que usa para funcionar
 
 4.2 Si queremos ejecutar comandos dentro de un contendor podemos usar Docker Desktop o podemos utilizar el comando `docker exec`. 
+---
 
 Para abrir una terminal, podemos ejecutar el programa bash con el parámetro -it (t de terminal e i de Standard Input).
 
@@ -76,3 +121,5 @@ Ejecuta el comando y muestra una captura de la terminal dentro del contendor.
 
 
 4.3 Apaga todos los contendores de este proyecto con el comando `docker compose down` (Captura)
+---
+![alt text](image-6.png)
