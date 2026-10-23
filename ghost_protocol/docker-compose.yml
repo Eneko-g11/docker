@@ -3,7 +3,7 @@ services:
     image: filebrowser/filebrowser:v2.23.0
     container_name: uploader
     volumes:
-      - ${RUTA_BASE}:/srv
+      - ${RUTA_BASE}:ghost_protocol\redaccion_data
     ports:
       - "${PORT_FILEBROWSER}:80"   # <--- ¡ERROR AQUÍ!
     restart: unless-stopped
@@ -18,7 +18,7 @@ services:
     image: lscr.io/linuxserver/obsidian:latest
     container_name: obsidian   # <--- ¡ERROR DE ESCRITURA! Demasiados espacios a la izquierda
     volumes:
-      - ${RUTA_BASE}:/config/redaccion_data
+      - ${RUTA_BASE}:ghost_protocol\redaccion_data
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
@@ -33,7 +33,7 @@ services:
     image: lscr.io/linuxserver/libreoffice:latest
     container_name: libreoffice
     volumes:
-      - ${RUTA_BASE}:/config/redaccion_data
+      - ${RUTA_BASE}:ghost_protocol\redaccion_data
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
@@ -47,7 +47,7 @@ services:
  jellyfin:
     image: jellyfin/jellyfin:latest
     container_name: jellyfin
-      - ${RUTA_BASE}:./redaccion_data
+      - ${RUTA_BASE}:ghost_protocol\redaccion_data
     ports:
       - "${PORT_JELLYFIN}:8096"
     environment:
